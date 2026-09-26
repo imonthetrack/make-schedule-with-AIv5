@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panduan Pengujian - Jadwal Kilat & Rest Guard AI</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 680px;
+      width: 100%;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 20px;
+      padding: 36px 32px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    }
+    .badge {
+      display: inline-block;
+      background: #065f46;
+      color: #34d399;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    p.sub {
+      color: #94a3b8;
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+    .card-primary {
+      background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+      border: 1px solid #3b82f6;
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .card-primary h2 {
+      font-size: 18px;
+      color: #93c5fd;
+      margin-bottom: 8px;
+    }
+    .card-primary p {
+      font-size: 14px;
+      color: #cbd5e1;
+      margin-bottom: 18px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: #3b82f6;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      display: inline-block;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .btn-primary:hover {
+      background: #2563eb;
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background: #334155;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    .btn-secondary:hover {
+      background: #475569;
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin: 24px 0 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .box-local {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 18px 20px;
+      font-size: 13px;
+      color: #cbd5e1;
+    }
+    .box-local ol {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+    .box-local li {
+      margin-bottom: 8px;
+    }
+    .code {
+      background: #1e293b;
+      color: #f59e0b;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .feature-item {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 13px;
+    }
+    .feature-item b {
+      color: #6ee7b7;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .footer {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="badge">BERKAS LOMBA / EVALUATION READY</span>
+    <h1>Jadwal Kilat & Rest Guard AI</h1>
+    <p class="sub">Aplikasi Produktivitas & Anti-Burnout Berbasis Web & PWA</p>
+
+    <!-- Opsi Paling Cepat untuk Dewan Juri -->
+    <div class="card-primary">
+      <h2>Opsi 1: Uji Coba Langsung di Browser (Rekomendasi Juri)</h2>
+      <p>Aplikasi sudah aktif di server cloud publik. Anda tidak perlu menginstal dependensi apa pun di komputer Anda.</p>
+      <div class="btn-group">
+        <a href="https://imonthetrack.github.io/make-schedule-with-AIv3/" target="_blank" class="btn-primary">
+          Buka Live Demo di GitHub Pages &rarr;
+        </a>
+        <a href="https://ais-pre-gzo3icrfvdr4z5a7lc42do-622745663415.asia-southeast1.run.app" target="_blank" class="btn-secondary">
+          Tautan Cadangan (Cloud Run)
+        </a>
+      </div>
+    </div>
+
+    <!-- Opsi Menjalankan Lokal dari ZIP -->
+    <div class="section-title">
+      <span>💻</span>
+      <span>Opsi 2: Menjalankan Secara Lokal dari Folder ZIP</span>
+    </div>
+    <div class="box-local">
+      <p>Sebagai aplikasi berbasis web modern (SPA), peramban memblokir eksekusi modul langsung dari protokol <code>file:///</code> demi keamanan (CORS policy). Untuk menjalankannya di laptop Anda:</p>
+      <ol>
+        <li>Ekstrak seluruh isi file ZIP ini ke komputer Anda.</li>
+        <li><b>Cara Otomatis:</b> Klik dua kali file <span class="code">start-app.bat</span> di dalam folder ini. Aplikasi akan otomatis terbuka di <code>http://localhost:3000</code>.</li>
+        <li><b>Cara Manual via Terminal / CMD:</b>
+          <div style="margin-top: 6px; background: #182234; padding: 8px 12px; border-radius: 6px; font-family: monospace; color: #38bdf8;">
+            npm install<br>
+            npm run dev
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <!-- Ringkasan Fitur yang Dinilai -->
+    <div class="section-title">
+      <span>✨</span>
+      <span>Fitur Utama yang Dinilai</span>
+    </div>
+    <div class="features">
+      <div class="feature-item">
+        <b>1. Preset Kilat 1-Klik</b>
+        Jadwal siap pakai untuk Ujian, Coding, Freelance, dan Istirahat Sehat.
+      </div>
+      <div class="feature-item">
+        <b>2. Shift Mundur/Maju 15 Menit</b>
+        Solusi anti-gagal jadwal saat waktu kegiatan bergeser.
+      </div>
+      <div class="feature-item">
+        <b>3. Rest Guard & Audio Alarm</b>
+        Pengingat istirahat dengan audio sintetis Web Audio API tanpa internet.
+      </div>
+      <div class="feature-item">
+        <b>4. Dukungan PWA & Offline</b>
+        Dapat diinstal di Desktop/HP dan tetap aktif tanpa koneksi internet.
+      </div>
+    </div>
+
+    <div class="footer">
+      Jadwal Kilat & Rest Guard AI &bull; Siap untuk Penilaian Lomba
+    </div>
+  </div>
+</body>
+</html>
